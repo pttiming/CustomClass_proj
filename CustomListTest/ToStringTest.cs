@@ -38,23 +38,7 @@ namespace CustomListTest
 
         }
 
-        [TestMethod]
-        public void ConvertListofListtoString_Result1234512345()
-        {
-            //Arrange
-            List<string> myList = new List<string>() { "1", "2", "3", "4" };
-            List<string> myList2 = new List<string>() { "1", "2", "3", "4" };
-            CustomList<List<string>> customList = new CustomList<List<string>>() { myList, myList2 };
 
-            string expected = "12341234";
-            string actual;
-
-            //Act
-            actual = customList.ToString();
-            //Assert
-            Assert.AreEqual(expected, actual);
-
-        }
         [TestMethod]
         public void ConvertListofStringsstoString_Result12345()
         {

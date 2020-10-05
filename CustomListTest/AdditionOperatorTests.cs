@@ -81,5 +81,45 @@ namespace CustomListTest
             Assert.AreEqual(expected, actual);
 
         }
+        [TestMethod]
+        public void AdditionOperatorOverload_ThreeIntListsof12TotalItems_Capactiy16()
+        {
+            //Arrange
+            CustomList<int> l1 = new CustomList<int>() { 1, 2, 3 };
+            CustomList<int> l2 = new CustomList<int>() { 5, 6, 7 };
+            CustomList<int> l3 = new CustomList<int>() { 5, 6, 7, 8 ,9 , 0 };
+            CustomList<int> l4 = new CustomList<int>();
+            int expected = 16;
+            int actual;
+
+            //Act
+            l4 = (l1 + l2 + l3);
+            actual = l4.Capacity;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+        [TestMethod]
+        public void AdditionOperatorOverload_ThreeIntListsof12TotalItems_Count12()
+        {
+            //Arrange
+            CustomList<int> l1 = new CustomList<int>() { 1, 2, 3 };
+            CustomList<int> l2 = new CustomList<int>() { 5, 6, 7 };
+            CustomList<int> l3 = new CustomList<int>() { 5, 6, 7, 8, 9, 0 };
+            CustomList<int> l4 = new CustomList<int>();
+            int expected = 12;
+            int actual;
+
+            //Act
+            l4 = (l1 + l2 + l3);
+            actual = l4.Count;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
+
     }
 }
