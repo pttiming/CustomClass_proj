@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CustomListProject
 {
-    public class CustomList<T> : IEnumerable<T>
+    public class CustomList<T> : IEnumerable
     {
         //Member Variables
         int count;

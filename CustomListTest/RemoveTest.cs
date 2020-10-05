@@ -98,6 +98,39 @@ namespace CustomListTest
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void Remove_3ItemList_RemoveItemThatDoesNotExistinList_ReturnFalse()
+        {
+            //Arrange
+            CustomList<int> customList = new CustomList<int>() { 0, 1, 2 };
+
+
+            //Act
+            customList.Remove(5);
+
+            //Assert
+            Assert.IsFalse(customList.Remove(5));
+        }
+
+        [TestMethod]
+        public void Remove_TenItemListRemove1_cwIndex9()
+        {
+            //Arrange
+            CustomList<int> customList = new CustomList<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            int expected = 9;
+            int actual;
+
+            //Act
+            customList.Remove(10);
+            Console.WriteLine(customList[9]);
+
+            actual = customList.Count;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
 
     }
 }
