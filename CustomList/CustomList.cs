@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CustomListProject
 {
-    public class CustomList<T> : IEnumerable
+    public class CustomList<T> : IEnumerable<T>
     {
         //Member Variables
         int count;
@@ -144,15 +144,24 @@ namespace CustomListProject
             return customList3;
         }
 
-        public static CustomList<T> operator -(CustomList<T> customList1, CustomList<T> customList2)
+        public static CustomList<T> operator -(CustomList<T> c1, CustomList<T> c2)
         {
             CustomList<T> customList3 = new CustomList<T>();
+            CustomList<T> tempList = new CustomList<T>();
+            tempList = c1;
 
-            foreach(T item2 in customList2)
+            foreach(T item in c2)
             {
-
-            } 
-
+                for (int i = 0; i < c1.Count; i++)
+                {
+                    if(c1[i].Equals(item))
+                    {
+                        tempList.Remove(item);
+                        break;
+                    }
+                }
+            }
+            customList3 = tempList;
             return customList3;
         }
 
