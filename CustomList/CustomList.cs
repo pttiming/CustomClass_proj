@@ -182,5 +182,25 @@ namespace CustomListProject
             return customList3;
         }
 
+        public CustomList<T> Sort()
+        {
+            T temp;
+            for (int j = 0; j < Count - 2; ++) {
+                for (int i = 0; i < Count - 2; i++)
+                {
+                    if(_items[i] > _items[i + 1])
+                    {
+                        temp = _items[i + 1];
+                        _items[i + 1] = _items[i];
+                        _items[i] = temp;
+                    }
+                }
+
+            }
+
+
+            return result;
+        }
+
     } 
 }

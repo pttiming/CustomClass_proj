@@ -56,6 +56,7 @@
     <Compile Include="AdditionOperatorTests.cs" />
     <Compile Include="SubtractionOverloadTest.cs" />
     <Compile Include="SortTest.cs" />
+    <Compile Include="SortCustomListTest.cs" />
     <Compile Include="ZipperMergeTest.cs" />
   </ItemGroup>
   <ItemGroup>
