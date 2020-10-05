@@ -53,7 +53,7 @@ namespace CustomListProject
 
        public IEnumerator<T> GetEnumerator()
         {
-            for (int i = 0; i < _items.Length; i++)
+            for (int i = 0; i < Count; i++)
             {
                 yield return _items[i];
             }
