@@ -54,6 +54,8 @@
     <Compile Include="RemoveTest.cs" />
     <Compile Include="ToStringTest.cs" />
     <Compile Include="AdditionOperatorTests.cs" />
+    <Compile Include="SubtractionOverloadTest.cs" />
+    <Compile Include="SortTest.cs" />
     <Compile Include="ZipperMergeTest.cs" />
   </ItemGroup>
   <ItemGroup>
