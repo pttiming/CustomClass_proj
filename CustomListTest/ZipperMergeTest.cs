@@ -81,5 +81,24 @@ namespace CustomListTest
             Assert.AreEqual(expected, actual);
 
         }
+
+        [TestMethod]
+        public void TwoIntCustomListTest_3IntsList5IntList_Index6is7()
+        {
+            //Arrange
+            CustomList<int> list1 = new CustomList<int>() { 1, 3, 5, 7, 9 };
+            CustomList<int> list2 = new CustomList<int>() { 2, 4, 6 };
+            CustomList<int> list3;
+            int expected = 7;
+            int actual;
+
+            //Act
+            list3 = new CustomList<int>();
+            list3 = list3.ZipperMerge(list1, list2);
+            actual = list3[6];
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
     }
 }
