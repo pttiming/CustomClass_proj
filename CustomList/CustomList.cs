@@ -20,7 +20,7 @@ namespace CustomListProject
         {
             get
             {
-                if (index < 0 || index >= _items.Length)
+                if (index < 0 || index >= count)
                 {
                     throw new IndexOutOfRangeException("Index Out of Range");
                 }
@@ -29,7 +29,7 @@ namespace CustomListProject
             }
             set
             {
-                if (index < 0 || index >= _items.Length)
+                if (index < 0 || index >= count)
                     throw new IndexOutOfRangeException("Index Out of Range");
                 _items[index] = value;
 
@@ -113,9 +113,9 @@ namespace CustomListProject
         public override string ToString()
         {
             string result = null;
-            foreach (T item in _items)
+            for (int i = 0; i < count; i++)
             {
-                result += item.ToString();
+               result += _items[i].ToString();
             }
 
             return result;

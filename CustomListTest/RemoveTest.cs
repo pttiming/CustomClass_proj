@@ -113,7 +113,27 @@ namespace CustomListTest
         }
 
         [TestMethod]
-        public void Remove_TenItemListRemove1_cwIndex9()
+        public void Remove_TenItemListRemove4_Capacity16()
+        {
+            //Arrange
+            CustomList<int> customList = new CustomList<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            int expected = 16;
+            int actual;
+
+            //Act
+            customList.Remove(4);
+            customList.Remove(5);
+            customList.Remove(6);
+            customList.Remove(7);
+
+            actual = customList.Capacity;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Remove_TenItemListRemoveSameItemMultipleTimes_Count9()
         {
             //Arrange
             CustomList<int> customList = new CustomList<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -122,15 +142,17 @@ namespace CustomListTest
             int actual;
 
             //Act
-            customList.Remove(10);
-            Console.WriteLine(customList[9]);
+            customList.Remove(4);
+            customList.Remove(4);
+            customList.Remove(4);
+            customList.Remove(4);
 
             actual = customList.Count;
 
             //Assert
             Assert.AreEqual(expected, actual);
+
+
         }
-
-
     }
 }
