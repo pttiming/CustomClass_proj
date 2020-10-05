@@ -18,7 +18,6 @@ namespace CustomListProject
             {
                 Console.WriteLine(i);
             }
-            Console.ReadLine();
         }
     }
 }

@@ -121,12 +121,6 @@ namespace CustomListProject
             return result;
         }
 
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return _items.GetEnumerator();
-        }
-
         public static CustomList<T> operator +(CustomList<T> customList1, CustomList<T> customList2)
         {
             CustomList<T> customList3 = new CustomList<T>();
